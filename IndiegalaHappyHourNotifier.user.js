@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Indiegala Happy Hour Notifier
 // @author      ZeroUnderscoreOu
-// @version     2.0.0
+// @version     2.0.1
 // @icon        
 // @description Simple checker for any Indiegala bundles being on Happy Hour
 // @namespace   https://github.com/ZeroUnderscoreOu/
@@ -28,7 +28,8 @@ Array.from(document.getElementsByClassName("bundle-page-other-bundles-extra-info
 				body: `Happy hour is on for ${Name}`,
 				data: A.href,
 				requireInteraction: true,
-				renotify: true
+				renotify: true,
+				tag: "IGHHN"
 			});
 			N.addEventListener("click",(Data)=>{ // setting the action to open bundle page
 				window.open(A.href,"_blank");
